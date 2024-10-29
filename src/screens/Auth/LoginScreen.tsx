@@ -1,12 +1,12 @@
 import { RouteProp } from '@react-navigation/native';
 
 import React, { useState } from 'react'
-import { StackNavigationProp } from '../../types';
+import { StackNavigationProp, TabNavigationProp } from '../../types';
 import { View } from 'react-native';
 import { TextInput, Button, Text } from 'react-native-paper';
 
 type LoginScreenProps = {
-  navigation: StackNavigationProp;
+  navigation: TabNavigationProp;
 };
 
 const LoginScreen = ({navigation}:LoginScreenProps) => {
@@ -16,7 +16,7 @@ const LoginScreen = ({navigation}:LoginScreenProps) => {
 
 
   const handleLogin =()=>{
-  navigation.replace('Home')
+  navigation.navigate('Services')
   }
 
   return (

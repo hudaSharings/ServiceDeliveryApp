@@ -24,11 +24,11 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const AppNavigator = () => {
   return (
    
-        <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }} >
-            <Stack.Screen name="Main" component={DrawerNavigator}  />
-            <Stack.Screen name="Login" component={LoginScreen}  />
-            <Stack.Screen name="Registration" component={RegistrationScreen} />
-            <Stack.Screen name="Home" component={MainTabs}/>
+        <Stack.Navigator initialRouteName="Main"  screenOptions={{ headerShown: false }} >
+            <Stack.Screen name="Main" component={DrawerNavigator} options={{ headerShown: false }}  />
+            <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
+            <Stack.Screen name="Registration" component={RegistrationScreen}  options={{ headerShown: false }}/>
+            <Stack.Screen name="Home" component={MainTabs} options={{ headerShown: false }}/>
             <Stack.Screen name="ServiceDetails" component={ServiceDetailsScreen}/>
             <Stack.Screen name="Cart" component={CartScreen} />
             <Stack.Screen name="Payment" component={PaymentScreen} />

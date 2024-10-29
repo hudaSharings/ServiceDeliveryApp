@@ -9,9 +9,9 @@ const Tab = createBottomTabNavigator();
 const MainTabs = () => {
   return (
     <Tab.Navigator>
-        <Tab.Screen name='Services' component={ServiceListScreen}  />
-        <Tab.Screen name='Orders' component={OrderHistoryScreen} />
-        <Tab.Screen name="Notifications" component={NotificationsScreen} />
+        <Tab.Screen name='Services' component={ServiceListScreen} options={{ headerShown: false }} />
+        <Tab.Screen name='Orders' component={OrderHistoryScreen} options={{ headerShown: false }} />
+        <Tab.Screen name="Notifications" component={NotificationsScreen}  options={{ headerShown: false }} />
     </Tab.Navigator>
   )
 }
