@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Electrician",
+    "description": "Electrical installation and repairs"
+  },
+  {
+    "id": 2,
+    "name": "Transport",
+    "description": "2-wheeler and 4-wheeler transport services"
+  },
+  {
+    "id": 3,
+    "name": "Housekeeping",
+    "description": "Cleaning services for your home"
+  }
+]
