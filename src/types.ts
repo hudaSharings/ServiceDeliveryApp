@@ -4,6 +4,7 @@ import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 export type StackParamList = {
   Login: undefined;
   Home: undefined;
+  Services: undefined;
 };
 
 export type TabParamList = {
@@ -11,6 +12,7 @@ export type TabParamList = {
   Orders: undefined;
 };
 export type RootStackParamList = {
+  Splash: undefined;
   Main: undefined;
   Login: undefined;
   Registration: undefined;

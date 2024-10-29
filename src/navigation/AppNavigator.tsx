@@ -17,14 +17,17 @@ import OrderTrackingScreen from '../screens/Orders/OrderTrackingScreen';
 import ProfileScreen from '../screens/Profile/ProfileScreen';
 import OrdersScreen from '../screens/Orders/OrdersScreen';
 import NotificationsScreen from '../screens/Notifications/NotificationsScreen';
+import SplashScreen from "../screens/Splash/SplashScreen";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 
 const AppNavigator = () => {
   return (
-   
+    <PaperProvider>
+      <NavigationContainer>
         <Stack.Navigator initialRouteName="Main"  screenOptions={{ headerShown: false }} >
+           <Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
             <Stack.Screen name="Main" component={DrawerNavigator} options={{ headerShown: false }}  />
             <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
             <Stack.Screen name="Registration" component={RegistrationScreen}  options={{ headerShown: false }}/>
@@ -34,7 +37,8 @@ const AppNavigator = () => {
             <Stack.Screen name="Payment" component={PaymentScreen} options={{ headerShown: true }}/>
             <Stack.Screen name="OrderTracking" component={OrderTrackingScreen} options={{ headerShown: true }}/>
         </Stack.Navigator>    
-     
+     </NavigationContainer>
+    </PaperProvider>
   )
 }
 

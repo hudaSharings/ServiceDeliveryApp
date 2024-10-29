@@ -16,13 +16,22 @@ import ProfileScreen from './src/screens/Profile/ProfileScreen';
 import AppNavigator from './src/navigation/AppNavigator';
 
 export default function App() {  
-  return ( 
-    <PaperProvider>
-      <NavigationContainer>
-    <AppNavigator />
-    </NavigationContainer>
-    </PaperProvider>
-  )
+  const [isLoading, setIsLoading] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const checkLoginStatus = async () => {
+      const userToken = await AsyncStorage.getItem('userToken');
+      setIsLoggedIn(!!userToken);
+      setIsLoading(false);
+    };
+    checkLoginStatus();
+  }, []);
+  
+  if (isLoading) return <SplashScreen />;
+
+  return <AppNavigator />   
+  
 }
 
 
