@@ -11,6 +11,7 @@ export type TabParamList = {
   Orders: undefined;
 };
 export type RootStackParamList = {
+  Main: undefined;
   Login: undefined;
   Registration: undefined;
   Home: undefined;

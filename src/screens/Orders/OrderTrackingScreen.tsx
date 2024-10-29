@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 import MapView, { Marker, Polyline } from 'react-native-maps';
-import { Text } from 'react-native-paper';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../types';
 
-export default function OrderTrackingScreen() {
-  const [currentLocation, setCurrentLocation] = useState({
-    latitude: 37.78825,
-    longitude: -122.4324,
-  });
+type OrderTrackingProps = NativeStackScreenProps<RootStackParamList, 'OrderTracking'>;
 
-  const destination = { latitude: 37.78845, longitude: -122.4356 };
+
+export default function OrderTrackingScreen(props: OrderTrackingProps) {
+  const [currentLocation, setCurrentLocation] = useState({ latitude: 37.7749, longitude: -122.4194 });
+  const [destination, setDestination] = useState({ latitude: 37.7849, longitude: -122.4094 });
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentLocation((prev) => ({
-        latitude: prev.latitude + 0.0001,
-        longitude: prev.longitude + 0.0001,
+      setCurrentLocation((prevLocation) => ({
+        latitude: prevLocation.latitude + 0.0001,
+        longitude: prevLocation.longitude + 0.0001,
       }));
-    }, 2000);
+    }, 1000);
     return () => clearInterval(interval);
   }, []);
 

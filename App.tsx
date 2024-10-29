@@ -17,11 +17,12 @@ import AppNavigator from './src/navigation/AppNavigator';
 
 export default function App() {  
   return ( 
-  <PaperProvider>
-    <NavigationContainer>
-      <AppNavigator />
+    <PaperProvider>
+      <NavigationContainer>
+    <AppNavigator />
     </NavigationContainer>
-  </PaperProvider>)
+    </PaperProvider>
+  )
 }
 
 
