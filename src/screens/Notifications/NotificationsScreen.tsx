@@ -1,9 +1,9 @@
 import React from 'react'
-import { View } from 'react-native'
+import { View ,Text} from 'react-native'
 
 const NotificationsScreen = () => {
   return (
-    <View>NotificationsScreen</View>
+    <View><Text>NotificationsScreen</Text></View>
   )
 }
 
